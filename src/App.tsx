@@ -1,27 +1,19 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+import './App.css';
+import MinecraftGame from './pages/MinecraftGame';
+import { Toaster } from './components/ui/sonner';
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+function App() {
+  return (
+    <>
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center mt-8 mb-4 gradient-heading">Simple Minecraft Game</h1>
+        <p className="text-center mb-8">Click to place blocks, right-click to remove them!</p>
+        <MinecraftGame />
+      </div>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </>
+  );
+}
 
 export default App;
