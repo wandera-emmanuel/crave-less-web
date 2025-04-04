@@ -61,50 +61,53 @@
   }
 }
 
-.motivational-card {
-  @apply relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md;
-}
+@layer components {
+  .motivational-card {
+    @apply relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md;
+  }
 
-.motivational-card::before {
-  content: "";
-  @apply absolute top-0 left-0 w-1 h-full bg-green;
-}
+  .motivational-card::before {
+    content: "";
+    @apply absolute top-0 left-0 w-1 h-full bg-green;
+  }
 
-.progress-bar-container {
-  @apply w-full h-3 bg-gray-100 rounded-full overflow-hidden;
-}
+  .progress-bar-container {
+    @apply w-full h-3 bg-gray-100 rounded-full overflow-hidden;
+  }
 
-.floating-card {
-  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
-}
+  .floating-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
+  }
 
-.waves-container {
-  @apply absolute bottom-0 left-0 right-0 h-24 overflow-hidden;
-}
+  .waves-container {
+    @apply absolute bottom-0 left-0 right-0 h-24 overflow-hidden;
+  }
 
-.waves {
-  @apply absolute bottom-0 left-0 w-full h-full transform translate-y-1/2;
-}
+  .waves {
+    @apply absolute bottom-0 left-0 w-full h-full transform translate-y-1/2;
+  }
 
-.wave {
-  @apply absolute bottom-0 left-0 w-[200%] h-full bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' class='shape-fill'%3E%3C/path%3E%3C/svg%3E")] opacity-50;
-  background-repeat: repeat-x;
-  animation: wave 25s linear infinite;
-}
+  .wave {
+    @apply absolute bottom-0 left-0 w-[200%] h-full opacity-50;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' class='shape-fill'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    animation: wave 25s linear infinite;
+  }
 
-.wave-1 {
-  z-index: 10;
-  opacity: 0.3;
-  animation-duration: 20s;
-  filter: brightness(0.95) saturate(1.05);
-}
+  .wave-1 {
+    z-index: 10;
+    opacity: 0.3;
+    animation-duration: 20s;
+    filter: brightness(0.95) saturate(1.05);
+  }
 
-.wave-2 {
-  z-index: 20;
-  opacity: 0.2;
-  animation-delay: -5s;
-  animation-duration: 15s;
-  filter: brightness(0.9) saturate(1.1);
+  .wave-2 {
+    z-index: 20;
+    opacity: 0.2;
+    animation-delay: -5s;
+    animation-duration: 15s;
+    filter: brightness(0.9) saturate(1.1);
+  }
 }
 
 @keyframes wave {

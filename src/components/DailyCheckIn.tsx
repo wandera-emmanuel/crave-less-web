@@ -37,8 +37,9 @@ const DailyCheckIn: React.FC = () => {
     setHasCheckedIn(true);
     setNotes('');
     
-    toast("Check-in complete", {
-      description: "Great job on your daily reflection!",
+    toast({
+      title: "Check-in complete",
+      description: "Great job on your daily reflection!"
     });
   };
 
