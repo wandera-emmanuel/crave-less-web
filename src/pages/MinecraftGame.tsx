@@ -153,7 +153,7 @@ const MinecraftGame = () => {
           </button>
           <button className="game-button" onClick={resetGame}>Reset</button>
           <button 
-            className={`game-button ${isErasing ? 'bg-red-600 hover:bg-red-700' : ''}`} 
+            className={`game-button ${isErasing ? 'bg-destructive hover:bg-destructive/90' : ''}`} 
             onClick={toggleEraseMode}
           >
             {isErasing ? 'Build' : 'Erase'}

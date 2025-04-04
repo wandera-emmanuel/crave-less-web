@@ -127,7 +127,7 @@
   }
 
   .game-button {
-    @apply px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors;
+    @apply px-3 py-1 bg-secondary text-white rounded hover:bg-secondary/80 transition-colors;
   }
 
   .inventory {
@@ -139,7 +139,7 @@
   }
 
   .inventory-slot.selected {
-    @apply border-yellow-400 bg-gray-500;
+    @apply border-amber bg-gray-500;
   }
 
   .game-world {
